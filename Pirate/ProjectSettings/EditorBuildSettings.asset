@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start Menu.unity
+    guid: 3b31b50909afe0b408d1c626df1ac5a4
+  - enabled: 1
+    path: Assets/Scenes/Events/InitialTest.unity
+    guid: 77fa0d3b31ffdd742baee0ccbbac6b87
+  - enabled: 1
+    path: Assets/Scenes/Events/MessageInBottleRescueEvent.unity
+    guid: 2c7a9d11f510ecf4397876ee428a54b4
+  - enabled: 1
+    path: Assets/Scenes/Events/EmptyZoneEvent.unity
+    guid: 7e286b0ca5c06b04b9c3b3ded57a3f16
+  - enabled: 1
+    path: Assets/Scenes/Events/RescueEvent.unity
+    guid: 68aad698e9a613d48a52cc8926f0be2d
+  - enabled: 1
+    path: Assets/Scenes/Events/MessageInBottleTreasureEvent.unity
+    guid: 2fc9ee22ddd550b41a4e976375cbdfd8
+  - enabled: 1
+    path: Assets/Scenes/Events/TreasureEvent.unity
+    guid: f18b8c4245a5f444da71bebf860acc1b
+  - enabled: 1
+    path: Assets/Scenes/Events/FishingShipEvent.unity
+    guid: 818198407cd2dc446be1369c60371674
+  - enabled: 1
+    path: Assets/Scenes/Events/MerchantShipEvent.unity
+    guid: 98a498200a06217498eb362cd9e232f2
+  - enabled: 1
+    path: Assets/Scenes/Events/IslandTrapEvent.unity
+    guid: 35a826dadac2ba446858e98cbcccd6ac
+  - enabled: 1
+    path: Assets/Scenes/Events/RoyalNavyShipEvent.unity
+    guid: fbb9e2ec5306dab41847b92befb2d03c
+  - enabled: 1
+    path: Assets/Scenes/Events/ArmadaShipEvent.unity
+    guid: c57e1fa91635dc74f828e659b4f47fdd
+  - enabled: 1
+    path: Assets/Scenes/Events/VictoryEvent.unity
+    guid: 2d5ac89cb0e57d4438f944c6c2499d8c
+  m_configObjects: {}
