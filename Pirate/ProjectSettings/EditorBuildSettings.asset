@@ -27,21 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Events/TreasureEvent.unity
     guid: f18b8c4245a5f444da71bebf860acc1b
   - enabled: 1
-    path: Assets/Scenes/Events/FishingShipEvent.unity
-    guid: 818198407cd2dc446be1369c60371674
-  - enabled: 1
-    path: Assets/Scenes/Events/MerchantShipEvent.unity
-    guid: 98a498200a06217498eb362cd9e232f2
-  - enabled: 1
-    path: Assets/Scenes/Events/IslandTrapEvent.unity
-    guid: 35a826dadac2ba446858e98cbcccd6ac
-  - enabled: 1
-    path: Assets/Scenes/Events/RoyalNavyShipEvent.unity
-    guid: fbb9e2ec5306dab41847b92befb2d03c
-  - enabled: 1
-    path: Assets/Scenes/Events/ArmadaShipEvent.unity
-    guid: c57e1fa91635dc74f828e659b4f47fdd
-  - enabled: 1
     path: Assets/Scenes/Events/VictoryEvent.unity
     guid: 2d5ac89cb0e57d4438f944c6c2499d8c
   m_configObjects: {}

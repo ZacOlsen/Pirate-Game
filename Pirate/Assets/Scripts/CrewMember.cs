@@ -29,6 +29,7 @@ public class CrewMember : Damageable {
 	public const float MOVEMENT_ERROR_RANGE = .01f;
 	private const float Z_VAL = -.1f;
 
+//	public BattleManager battleManager;
 	[SerializeField] private CrewMember target;
 	public bool isPlayerCrew = false;
 

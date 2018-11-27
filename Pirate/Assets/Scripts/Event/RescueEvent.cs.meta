@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 21293a2d2fcef9845ae6074a48e3f647
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - message: {instanceID: 0}
+  - mapButton: {instanceID: 0}
+  - report: {instanceID: 0}
+  - crewPrefab: {instanceID: 0}
+  - selectionManager: {instanceID: 0}
+  - plankPrefab: {fileID: 1849365322398828, guid: 3c734c32080f42641ba6a3414ec25a49,
+      type: 2}
+  - islandContent: {instanceID: 0}
+  - crewContent: {instanceID: 0}
+  - exchangeManager: {instanceID: 0}
+  - beach: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

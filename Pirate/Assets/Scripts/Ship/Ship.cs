@@ -46,6 +46,7 @@ public class Ship : Damageable {
 
 	//TODO: encapsulate better
 	public int cannonDamage = 5;
+//	private BattleManager battleManager;
 
 	void Awake () {
 
@@ -306,7 +307,7 @@ public class Ship : Damageable {
 
 		return shortestPath;
 	}
-	
+		
 	public new bool TakeDamage (int damage) {
 
 		bool result = base.TakeDamage (damage);
