@@ -46,7 +46,7 @@ public class Ship : Damageable {
 
 	//TODO: encapsulate better
 	public int cannonDamage = 5;
-//	private BattleManager battleManager;
+	private BattleManager battleManager;
 
 	void Awake () {
 
@@ -188,6 +188,7 @@ public class Ship : Damageable {
 
 		floodedTiles.Add (flooded);
 		if (floodedTiles.Count >= maxFloodTiles) {
+			battleManager.ShipDies (this);
 		}
 	}
 
@@ -308,9 +309,22 @@ public class Ship : Damageable {
 		return shortestPath;
 	}
 		
+	public void InitializeBattle (BattleManager battleManager) {
+
+		this.battleManager = battleManager;
+
+		for (int i = 0; i < crewMembers.Count; i++) {
+			crewMembers [i].battleManager = battleManager;
+		}
+	}
+
 	public new bool TakeDamage (int damage) {
 
 		bool result = base.TakeDamage (damage);
+
+		if (result && battleManager) {
+			battleManager.ShipDies (this);
+		}
 
 		return result;
 	}

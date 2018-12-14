@@ -6,9 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class Map : MonoBehaviour {
 
-	private static string[] sceneNames = { "EmptyZoneEvent", "MessageInBottleRescueEvent",
+	private static string[] allSceneNames = { "EmptyZoneEvent", "MessageInBottleRescueEvent",
+		"MessageInBottleTreasureEvent", "FishingShipEvent", "ArmadaShipEvent", "MerchantShipEvent",
+		"RoyalNavyShipEvent"
+	};
+
+	private static string[] earlySceneNames = { "EmptyZoneEvent", "MessageInBottleRescueEvent",
 		"MessageInBottleTreasureEvent"
 	};
+
+	private static string[] lateSceneNames = { "FishingShipEvent", "ArmadaShipEvent", "MerchantShipEvent",
+		"RoyalNavyShipEvent"
+	};
+
+	private const string L_SYSTEM = "EEEEAAAALLL";
 
 	private PlayerShip ship;
 	private Text info;
@@ -21,26 +32,7 @@ public class Map : MonoBehaviour {
 		//TODO: maybe remove?
 #endif
 
-		for (int i = transform.childCount - 1; i >= 0; i--) {
-			SectorButtonNode sbNode = transform.GetChild (i).GetComponent<SectorButtonNode> ();
-
-			if (i == 0) {
-				sbNode.text.text = "InitialTest";
-				sbNode.EnableNextSectorOptions ();
-
-			} else if (sbNode.children.Count == 0) {
-				sbNode.text.text = "VictoryEvent";
-
-			} else {
-				//TODO: used for hardcoded levels
-				if (sbNode.text.text == "Button") {
-					sbNode.text.text = sceneNames[Random.Range (0, sceneNames.Length)];
-				}
-			}
-
-			sbNode.button.interactable = false;
-		}
-		
+		GenerateSceneNames (transform.GetChild (0).GetComponent<SectorButtonNode> (), 0);
 		ship = GameObject.Find ("ship").GetComponent<PlayerShip> ();
 	}
 
@@ -66,6 +58,43 @@ public class Map : MonoBehaviour {
 
 		GameObject.Find ("OpenMap").GetComponent<Button> ().onClick.AddListener (ToggleMap);
 		camModePackage = GameObject.Find ("Cam Mode Package");
+	}
+
+	private void GenerateSceneNames (SectorButtonNode sbNode, int layer) {
+
+		if (layer == 0) {
+			sbNode.text.text = "InitialTest";
+
+		} else if (sbNode.children.Count == 0) {
+			sbNode.text.text = "VictoryEvent";
+
+		} else {
+			//TODO: used for hardcoded levels
+			if (sbNode.text.text == "Button") {
+
+				switch (L_SYSTEM[layer]) {
+					case 'E':
+						sbNode.text.text = earlySceneNames[Random.Range (0, earlySceneNames.Length)];
+						break;
+					case 'A':
+						sbNode.text.text = allSceneNames[Random.Range (0, allSceneNames.Length)];
+						break;
+					case 'L':
+						sbNode.text.text = lateSceneNames[Random.Range (0, lateSceneNames.Length)];
+						break;
+				}
+			}
+		}
+
+		sbNode.button.interactable = false;
+		for(int i = 0; i < sbNode.children.Count; i++) {
+			SectorButtonNode child = sbNode.children[i];
+			GenerateSceneNames (child, layer + 1);
+		}
+
+		if (layer == 0) {
+			sbNode.EnableNextSectorOptions ();
+		}
 	}
 
 	private void ToggleMap () {

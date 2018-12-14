@@ -29,7 +29,7 @@ public class CrewMember : Damageable {
 	public const float MOVEMENT_ERROR_RANGE = .01f;
 	private const float Z_VAL = -.1f;
 
-//	public BattleManager battleManager;
+	public BattleManager battleManager;
 	[SerializeField] private CrewMember target;
 	public bool isPlayerCrew = false;
 
@@ -121,6 +121,25 @@ public class CrewMember : Damageable {
 			PrintMethod ();
 			printe = false;
 			Debug.Break ();
+		}
+
+		if (battleManager != null) {
+
+			if (role == Role.CANNONEER) {
+				CrewMember priorityTarget = isPlayerCrew ? battleManager.GetNextOtherPriority ()
+				: battleManager.GetNextPlayerPriority ();
+
+				if (target != priorityTarget) {
+					target = priorityTarget;
+					if (target) {
+						BeginPath (AStar.FindPath (current, target.current, true));
+						couldFindPath = false;
+					}
+				}
+			}
+
+		} else {
+			target = null;
 		}
 
 		Vector3 tilePos = current.transform.position;
@@ -285,6 +304,13 @@ public class CrewMember : Damageable {
 
 					anim.SetInteger ("Idle Action", 0);
 
+					if (battleManager && role == Role.CANNONEER && current == shipPos.tile && 
+						Time.time - timeOfLastAction > cannonFireSpeed) {
+
+						float rand = Random.Range (0f, 100f);
+						((CannonPosition) shipPos).Fire (battleManager, cannonHitChance > rand);
+						timeOfLastAction = Time.time;
+					}
 				}
 
 				break;

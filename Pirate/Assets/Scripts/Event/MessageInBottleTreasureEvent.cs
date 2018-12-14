@@ -10,7 +10,11 @@ public class MessageInBottleTreasureEvent : EmptyZoneEvent {
 			
 			float r = Random.Range (0f, 1f);
 
-			Map.StartEvent ("TreasureEvent");
+			if (r >= .5f) {
+				Map.StartEvent ("TreasureEvent");
+			} else {
+				Map.StartEvent ("IslandTrapEvent");
+			}
 
 		} else {
 			ProceedToNextZone ();

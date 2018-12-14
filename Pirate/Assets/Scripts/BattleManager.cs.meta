@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: abdd54454d352a04ca5e85aaec7c25ef
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - plankPrefab: {fileID: 1849365322398828, guid: 3c734c32080f42641ba6a3414ec25a49,
+      type: 2}
+  - timer: {instanceID: 0}
+  - fleeButton: {instanceID: 0}
+  - shipEvent: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
