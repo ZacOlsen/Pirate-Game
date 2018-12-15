@@ -3800,7 +3800,7 @@ MonoBehaviour:
   crewMem: {fileID: 0}
   isEdgeTile: 1
   layer: 0
-  teleportLayerChange: 1
+  teleportLayerChange: 0
   heapIndex: 0
   fitness: 3.4028235e+38
   goal: 3.4028235e+38
@@ -23670,7 +23670,7 @@ MonoBehaviour:
   food: 30
   wood: 13
   gold: 40
-  cannonDamage: 5
+  cannonDamage: 3
   royalNavyStatus: 0
   armadaStatus: 0
 --- !u!4 &1429712168

@@ -53,6 +53,11 @@ public class RescueEvent : EncounterPeopleEvent {
 		CreateBoardingPlank ();
 	}
 
+	protected void OnDestroy () {
+		//TODO: change from hard coded
+		AStar.RemoveLayerFromLayout (3);
+	}
+
 	public void OkButton () {
 
 		gameObject.SetActive (false);

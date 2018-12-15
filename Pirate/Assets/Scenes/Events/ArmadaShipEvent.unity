@@ -5364,7 +5364,7 @@ MonoBehaviour:
   food: 0
   wood: 0
   gold: 0
-  cannonDamage: 5
+  cannonDamage: 3
 --- !u!212 &594614143
 SpriteRenderer:
   m_ObjectHideFlags: 0

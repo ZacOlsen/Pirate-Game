@@ -560,7 +560,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This Jame Has Piratz
+  m_Text: Swifter Than Sea
 --- !u!222 &1298023561
 CanvasRenderer:
   m_ObjectHideFlags: 0

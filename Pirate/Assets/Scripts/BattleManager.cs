@@ -131,6 +131,7 @@ public class BattleManager : MonoBehaviour {
 		if (phase != BattlePhase.OVER) {
 			
 			phase = BattlePhase.OVER;
+			timer.enabled = false;
 
 			if (ship == playerShip) {
 				LostBattle ();

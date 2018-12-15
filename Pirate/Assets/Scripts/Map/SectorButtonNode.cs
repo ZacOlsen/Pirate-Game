@@ -58,13 +58,13 @@ public class SectorButtonNode : MonoBehaviour, IPointerEnterHandler, IPointerExi
 
 	public void OnPointerEnter (PointerEventData pointer) {
 #if UNITY_EDITOR
-	//	text.enabled = true;
+//		text.enabled = true;
 #endif
 	}
 
 	public void OnPointerExit (PointerEventData pointer) {
 #if UNITY_EDITOR
-	//	text.enabled = false;
+		text.enabled = false;
 #endif
 	}
 
