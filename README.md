@@ -1,5 +1,7 @@
 # CS_425_Final
 
+Video: https://www.youtube.com/watch?v=teeIpIO9y-I&feature=youtu.be
+
 Game Play
 
 In this game, the player manages a pirate ship that is attempting to sail across the ocean. The challenges in this include managing your crew’s health, food supply, money, ship repairs, and overall standing with other peoples that may be encountered. This game is played entirely with the mouse. To select button options, the player must left click on the button and release the button while still hovering over button. To issues orders to crew members, the player must left click on the crew member to select them and right click to issue the order. In this game, the player is playing the job of manager of the ship, the A.I. controls much of how agents accomplish the tasks that the player gives them.
