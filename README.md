@@ -1,4 +1,4 @@
-# CS_425_Final
+# Pirate Game
 
 Video: https://www.youtube.com/watch?v=teeIpIO9y-I&feature=youtu.be
 
